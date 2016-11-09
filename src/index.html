@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trivia</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel='stylesheet' type='text/css' href='./styles.css'>
+	</head>
+
+
+	<body>
+		<header class="container-fluid">
+			<div class="row-fluid">
+				<h1>Daily Trivia</h1>
+			</div>
+			<div class='row-fluid hidden' id='userStats'>
+				<span><span id='userName'></span>, you've answered <span id='totQs'></span> questions in total, with <span id='perc'></span>% of your answers correct!</span>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<main>
+			<!-- Login and signup -->
+			<div id='loginSignup'>
+				<div id='loginModule'>
+					<h2>Login</h2>
+					<form>
+				  		<div class="form-group">
+				   		 	<input class='form-control' id='nameSi' type='name' placeholder="name"/>
+							<input class='form-control' id='passSi' type='password' placeholder="password"/>
+							<br/>
+							<button id='login' class='form-control btn btn-primary' type='submit'>Login</button>
+				 		</div>
+				  	</form>
+			  	</div>
+			  	<div id='signUpModule' class='hidden'>
+			  		<h2>Signup</h2>
+			  		<form>
+			  			<div class='form-group'>
+			  				<input class='form-control' id='name' type='name' placeholder="Your name"/>
+							<input class='form-control' id='pass' type='password' placeholder="password"/>
+							<input class='form-control' id='passCon' type='password' placeholder="confirm password"/>
+							<br/>
+							<button id='signUp' class='form-control btn btn-primary' type='submit'>Submit</button>
+						</div>
+			  		</form>
+			  	</div>
+			  	<div class="text-center">
+			  		<a id='newUser'><span>Haven't played before?</span></a>
+		  		</div>
+	  		</div>
+	  		<div id='gameSelect' class="container-fluid text-center hidden">
+	  			<button id='playNow' class="btn btn-default">Play Now</button>
+  			</div>
+	  		
+	  		<!-- Trivia module -->
+	  		<div id='game' class='container-fluid hidden'>
+	  			<div class='row-fluid'>
+	  				<div class='col-xs-6'>
+	  					<span id='category'></span>
+	  				</div>
+	  				<div class='col-xs-6'>
+	  					<span id='difficulty'></span>
+	  				</div>
+	  			</div>
+
+	  			<div class='row-fluid'>
+	  				<span id='question'></span>
+	  			</div>
+	  			<div id='multipleChoice'>
+	  				<div class='button-group'>
+	  					<button id='A'></button><button id='B'></button>
+	  					<br/>
+	  					<button id='C'></button><button id='D'></button>
+	  				</div>
+	  			</div>
+	  			<div id='trueFalse'>
+	  				<div class="button-group">
+	  					<button>True</button>
+	  					<button>False</button>
+	  				</div>
+	  			</div>
+	  			<div class='row-fluid text-right'>
+	  				<button id='nextQ'>Next</button>
+	  			</div>
+	  		</div>
+		</main>
+		
+
+		<footer class="container-fluid navbar navbar-fixed-bottom text-center">
+			some footer text
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  	crossorigin="anonymous"></script>
+
+ 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+ 		</script>
+
+	 	<script src='https://cdnjs.cloudflare.com/ajax/libs/lockr/0.8.4/lockr.min.js' type="text/javascript">	
+	 	</script>
+		<script type="text/javascript" src='./main.js'></script>
+	</body>
+</html>

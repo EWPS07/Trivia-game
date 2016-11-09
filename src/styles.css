@@ -1,0 +1,27 @@
+/*html elements*/
+body {
+	background-color: white;
+	color: black;
+	height: 100vh;
+	width: 100%;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+header {
+	height: 20%;
+	border-bottom: solid black 2px;
+}
+main {
+	height: 70%;
+}
+footer {
+	height: 10%;
+}
+
+
+/* classes */
+
+/* id's */
+#loginSignup {
+	padding: 10%;
+}
