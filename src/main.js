@@ -217,12 +217,6 @@ $(document).ready(function() {
 		document.getElementById('gameSelect').classList.add('hidden');
 		document.getElementById('game').classList.remove('hidden');
 	})
-	document.getElementById('show').addEventListener('click', function() {
-		document.getElementById('answer').classList.remove('hidden');
-		window.setTimeout(function() {
-			document.getElementById('answer').classList.add('hidden');
-		}, 3000)
-	})
 	document.getElementById('nextQ').addEventListener('click', function() {
 		count+=1;
 		if(count === 10) {
