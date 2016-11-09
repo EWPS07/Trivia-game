@@ -7,21 +7,57 @@ body {
 	padding-right: 10%;
 	padding-left: 10%;
 }
+small {
+	font-size: 125%;
+	font-style: italic;
+}
 header {
 	height: 20%;
 	border-bottom: solid black 2px;
+	padding-top: 3%;
 }
 main {
-	height: 70%;
+	height: 60%;
+	margin: 5%;
 }
 footer {
 	height: 10%;
 }
 
-
 /* classes */
 
 /* id's */
+#title {
+	background-color: yellow;
+	font-size: 400%;
+	font-weight: bolder;
+}
 #loginSignup {
 	padding: 10%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+#game {
+	padding: 5%;
+	height: 100%;
+	width: 100%;
+	color: black;
+	border: solid black 5px;
+	border-radius: 10px;
+}
+#triviaTop, #triviaBottom {
+	height: 15%;
+}
+#multipleChoice, #trueFalse, #triviaMid {
+	height: 35%;
+	padding: 5%;
+}
+#nextQ {
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+#question {
+	font-size: 225%;
+	font-weight: bolder;
 }
