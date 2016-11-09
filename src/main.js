@@ -26,7 +26,7 @@ var questions = [];
 			// check if name and password are connected
 			if(currentUser.name === name && currentUser.pass === pass) {
 				document.getElementById('loginSignup').classList.add('hidden');
-				document.getElementById('gameSelect').classList.remove('hidden');
+				document.getElementById('welcomeMessage').classList.remove('hidden');
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
@@ -53,7 +53,7 @@ var questions = [];
 				Lockr.set(name, {name: name, pass: pass, totQs: 0, corQs: 0, inQs: 0, perc: 0});
 				currentUser = Lockr.get(name);
 				document.getElementById('loginSignup').classList.add('hidden');
-				document.getElementById('gameSelect').classList.remove('hidden');
+				document.getElementById('welcomeMessage').classList.remove('hidden');
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
@@ -212,7 +212,7 @@ $(document).ready(function() {
 		document.getElementById('signUpModule').classList.remove('hidden');
 	})
 	document.getElementById('playNow').addEventListener('click', function() {
-		document.getElementById('gameSelect').classList.add('hidden');
+		document.getElementById('welcomeMessage').classList.add('hidden');
 		document.getElementById('game').classList.remove('hidden');
 	})
 	document.getElementById('nextQ').addEventListener('click', function() {

@@ -4,8 +4,6 @@ body {
 	color: black;
 	height: 100vh;
 	width: 100%;
-	padding-right: 10%;
-	padding-left: 10%;
 }
 small {
 	font-size: 125%;
@@ -15,6 +13,8 @@ header {
 	height: 20%;
 	border-bottom: solid black 2px;
 	padding-top: 3%;
+	background-color: black;
+	color: white;
 }
 main {
 	height: 60%;
@@ -22,35 +22,57 @@ main {
 }
 footer {
 	height: 10%;
+	background-color: black;
+	color: white;
 }
 
 /* classes */
-
+.game {
+	background-color: black;
+	color: white;
+	font-weight: bolder;
+}
 /* id's */
 #title {
+	color:black;
 	background-color: yellow;
 	font-size: 400%;
 	font-weight: bolder;
+	margin-left: 9%;
 }
 #loginSignup {
 	padding: 10%;
-	margin-right: 5%;
-	margin-left: 5%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+#welcomeMessage {
+	margin-right: 20%;
+	margin-left: 20%;
+}
+#userStats {
+	margin-left: 9%;
+}
+#userInfo {
+	margin-bottom: 0;
+	font-size: 120%;
 }
 #game {
 	padding: 5%;
 	height: 100%;
 	width: 100%;
 	color: black;
+	background-color: black;
 	border: solid black 5px;
 	border-radius: 10px;
 }
 #triviaTop, #triviaBottom {
 	height: 15%;
+	background-color: black;
 }
 #multipleChoice, #trueFalse, #triviaMid {
 	height: 35%;
 	padding: 5%;
+	background-color: white;
 }
 #nextQ {
 	position: relative;
@@ -59,5 +81,9 @@ footer {
 }
 #question {
 	font-size: 225%;
+	font-weight: bolder;
+}
+#response {
+	font-style: italic;
 	font-weight: bolder;
 }
