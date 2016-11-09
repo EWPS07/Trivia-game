@@ -84,7 +84,6 @@ var questions = [];
 		if(questions[count].type === 'boolean') {
 			document.getElementById('multipleChoice').classList.add('hidden');
 			document.getElementById('trueFalse').classList.remove('hidden');
-			document.getElementById('answer').innerHTML = questions[count].correct_answer;
 			
 			let T = document.getElementById('true');
 			let F = document.getElementById('false');
@@ -139,7 +138,6 @@ var questions = [];
 			B.innerHTML = possibleAnswers[1];
 			C.innerHTML = possibleAnswers[2];
 			D.innerHTML = possibleAnswers[3];
-			document.getElementById('answer').innerHTML = questions[count].correct_answer;
 			
 			A.addEventListener('click', function() {
 				if(A.innerHTML === questions[count].correct_answer) {
