@@ -107,7 +107,9 @@ function assemble() {
 	// check question format
 	if(questions[count].type === 'boolean') {
 		document.getElementById('multipleChoice').classList.add('hidden');
+		document.getElementById('multipleChoice').classList.add('noClick');
 		document.getElementById('trueFalse').classList.remove('hidden');
+		document.getElementById('trueFalse').classList.remove('noClick');
 		
 		let T = document.getElementById('true');
 		let F = document.getElementById('false');
@@ -139,8 +141,10 @@ function assemble() {
 		})
 	}
 	else {
-		document.getElementById('trueFalse').classList.add('hidden');
 		document.getElementById('multipleChoice').classList.remove('hidden');
+		document.getElementById('multipleChoice').classList.remove('noClick');
+		document.getElementById('trueFalse').classList.add('hidden');
+		document.getElementById('trueFalse').classList.add('noClick');
 		
 		let possibleAnswers = questions[count].incorrect_answers;
 		

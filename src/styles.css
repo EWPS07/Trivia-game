@@ -42,6 +42,9 @@ footer {
 .mc {
 	height: 50%;
 }
+.noClick {
+	pointer-events: none;
+}
 /* id's */
 #title {
 	color:black;
