@@ -282,7 +282,7 @@ $(document).ready(function() {
 	var questions = [];
 	// get trivia questions function ---------
 	let crossOrigin = 'https://crossorigin.me/';
-	let api = 'http://www.opentdb.com/api.php?amount=10';
+	let api = 'http://www.opentdb.com/api.php?amount=50';
 	let url = crossOrigin+api;
 
 	function getQuestions() {
