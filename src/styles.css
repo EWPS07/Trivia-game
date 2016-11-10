@@ -118,3 +118,11 @@ footer {
 	font-style: italic;
 	font-weight: bolder;
 }
+
+
+@media only screen and (min-width: 240px) and (max-width: 683px) and (min-resolution: 1dppx) {
+	header, main, footer, #loginSignup, #welcomeMessage, #loadingMessage {
+		margin: none;
+		padding: none;
+	}
+}
