@@ -53,7 +53,7 @@ function signUp(event) {
 	if(name.length>0) {
 		// make sure the user confirmed password correctly
 		if(pass === passCon) {
-			Lockr.set(name, {name: name, pass: pass, totQs: 0, corQs: 0, inQs: 0, perc: 0});
+			Lockr.set(name, {name: name, pass: pass, totQs: 0, corQs: 0, perc: 0});
 			currentUser = Lockr.get(name);
 			document.getElementById('loginSignup').classList.add('hidden');
 			document.getElementById('welcomeMessage').classList.remove('hidden');
@@ -98,9 +98,6 @@ function assemble() {
 	function correct() {
 		return currentUser.corQs+=1;
 	}
-	function incorrect() {
-		return currentUser.inQs+=1;
-	}
 	showBtns();
 	document.getElementById('category').innerHTML = questions[count].category;
 	document.getElementById('difficulty').innerHTML = questions[count].difficulty;
@@ -125,7 +122,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, this is false';
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 
@@ -139,7 +135,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, this is true';
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 	}
@@ -172,7 +167,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 		B.addEventListener('click', function() {
@@ -185,7 +179,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 		C.addEventListener('click', function() {
@@ -198,7 +191,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 		D.addEventListener('click', function() {
@@ -211,7 +203,6 @@ function assemble() {
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				incorrect();
 			}
 		})
 	}
