@@ -224,7 +224,8 @@ $(document).ready(function() {
 	})
 	document.getElementById('nextQ').addEventListener('click', function() {
 		currentUser.totQs+=1;
-		currentUser.perc= Math.round(((currentUser.corQs/currentUser.totQs)*100));
+		currentUser.perc= currentUser.corQs/currentUser.totQs;
+		currentUser.perc=Math.round(currentUser.perc*=100);
 		document.getElementById('userName').innerHTML = currentUser.name;
 		document.getElementById('totQs').innerHTML = currentUser.totQs;
 		document.getElementById('perc').innerHTML = currentUser.perc;
