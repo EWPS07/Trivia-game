@@ -6,7 +6,7 @@ The application has the user create a basic account(name and password) and as th
 
 Trivia questions were provided by [**entdb.com**](http://entdb.com)
 
-
+The live version of this game can be found here [**trivia-for-all.herokuapp.com**](http://trivia-for-all.herokuapp.com)
 Thanks for stopping by
 
 *Enjoy!*
