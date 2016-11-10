@@ -510,7 +510,17 @@ $(document).ready(function() {
 	
 	document.getElementById('playNow').addEventListener('click', function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
-		document.getElementById('game').classList.remove('hidden');
+		function loaded() {
+			if(questions.length>0) {
+				document.getElementById('game').classList.remove('hidden');
+				document.getElementById('loadingMessage').classList.add('hidden');
+			}
+			else {
+				document.getElementById('loadingMessage').classList.remove('hidden');
+				loaded();
+			}
+		}
+		loaded();
 	})
 	
 	document.getElementById('nextQ').addEventListener('click', function() {
