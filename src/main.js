@@ -38,6 +38,9 @@ function login(event) {
 		console.log(currentUser);
 		return currentUser;
 	}
+	else {
+		alert("Sorry, we don't seem to have your information");
+	}
 }
 // signup function ----------------
 function signUp(event) {
@@ -73,8 +76,30 @@ function signUp(event) {
 // assemble question UI ----------------
 var count = 0;
 currentUser = currentUser;
-console.log(currentUser);
 function assemble() {
+	function hideBtns() {
+		document.getElementById('true').classList.add('hidden');
+		document.getElementById('false').classList.add('hidden');
+		document.getElementById('A').classList.add('hidden');
+		document.getElementById('B').classList.add('hidden');
+		document.getElementById('C').classList.add('hidden');
+		document.getElementById('D').classList.add('hidden');
+	}
+	function showBtns() {
+		document.getElementById('true').classList.remove('hidden');
+		document.getElementById('false').classList.remove('hidden');
+		document.getElementById('A').classList.remove('hidden');
+		document.getElementById('B').classList.remove('hidden');
+		document.getElementById('C').classList.remove('hidden');
+		document.getElementById('D').classList.remove('hidden');
+	}
+	function correct() {
+		currentUser.corQs+=1;
+	}
+	function incorrect() {
+		currentUser.inQs+=1;
+	}
+	showBtns();
 	document.getElementById('category').innerHTML = questions[count].category;
 	document.getElementById('difficulty').innerHTML = questions[count].difficulty;
 	document.getElementById('question').innerHTML = questions[count].question;
@@ -89,41 +114,31 @@ function assemble() {
 		let F = document.getElementById('false');
 		
 		T.addEventListener('click', function() {
+			hideBtns();
 			if(T.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'this is true!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, this is false';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 
 		F.addEventListener('click', function() {
+			hideBtns();
 			if(F.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'this is false!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, this is true';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 	}
 	else {
@@ -146,78 +161,59 @@ function assemble() {
 		D.innerHTML = possibleAnswers[3];
 		
 		A.addEventListener('click', function() {
+			hideBtns();
 			if(A.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'Correct!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 		B.addEventListener('click', function() {
+			hideBtns();
 			if(B.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'Correct!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 		C.addEventListener('click', function() {
+			hideBtns();
 			if(C.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'Correct!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 		D.addEventListener('click', function() {
+			hideBtns();
 			if(D.innerHTML === questions[count].correct_answer) {
 				document.getElementById('response').innerHTML = 'Correct!';
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.corQs+=1;
+				correct();
 			}
 			else {
 				document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
 				document.getElementById('response').classList.remove('hidden');
-				currentUser.inQs+=1;
+				incorrect();
 			}
-			currentUser.totQs+=1;
-			currentUser.perc=Math.round((currentUser.corQs/currentUser.totQs)*100);
-			document.getElementById('userName').innerHTML = currentUser.name;
-			document.getElementById('totQs').innerHTML = currentUser.totQs;
-			document.getElementById('perc').innerHTML = currentUser.perc;
-			Lockr.set(currentUser.name, currentUser);
 		})
 	}
+	currentUser = currentUser;
 }
 
 $(document).ready(function() {
@@ -234,6 +230,13 @@ $(document).ready(function() {
 		document.getElementById('game').classList.remove('hidden');
 	})
 	document.getElementById('nextQ').addEventListener('click', function() {
+		currentUser.totQs+=1;
+		currentUser.perc= Math.round((currentUser.corQs/currentUser.totQs)*100);
+		document.getElementById('userName').innerHTML = currentUser.name;
+		document.getElementById('totQs').innerHTML = currentUser.totQs;
+		document.getElementById('perc').innerHTML = currentUser.perc;
+		Lockr.set(currentUser.name, currentUser);
+		console.log(currentUser);
 		count+=1;
 		if(count === 10) {
 			count=0;
