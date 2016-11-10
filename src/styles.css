@@ -40,7 +40,10 @@ footer {
 	border: none;
 }
 .mc {
-	height: 50%;
+	height: 100%;
+	width: 100%;
+	padding: none;
+	margin: none;
 }
 .noClick {
 	pointer-events: none;
@@ -81,10 +84,11 @@ footer {
 #triviaTop, #triviaBottom {
 	background-color: black;
 	color: white;
+	height: 5%;
 }
 #triviaTop {
-	height: 10%;
 	font-size: 120%;
+	padding-bottom: 2.5%;
 }
 #category, #difficulty {
 	background-color: yellow;
@@ -93,35 +97,24 @@ footer {
 	border: solid yellow 4px;
 	border-radius: 8px;
 }
-#triviaBottom {
-	height: 10%;
-}
-#multipleChoice, #trueFalse, #triviaMid {
+#multipleChoice, #trueFalse, #triviaQuestion {
 	background-color: white;
-	height: 40%;
+	height: 45%;
 }
-#triviaMid {
-	padding-left: 5%;
-	padding-right: 5%;
+#triviaQuestion {
+	padding: 2.5%;
 }
 #multipleChoice, #trueFalse {
-	height: 30%;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-#triviaMid {
-	height: 
+	padding: 5%;
 }
 #nextQ {
-	position: relative;
-	bottom: 0;
-	right: 0;
 }
 #question {
 	font-size: 225%;
 	font-weight: bolder;
 }
 #response {
+	font-size: 120%;
 	font-style: italic;
 	font-weight: bolder;
 }
