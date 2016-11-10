@@ -84,6 +84,7 @@ function assemble() {
 		document.getElementById('B').classList.add('hidden');
 		document.getElementById('C').classList.add('hidden');
 		document.getElementById('D').classList.add('hidden');
+		document.getElementById('nextQ').classList.remove('hidden');
 	}
 	function showBtns() {
 		document.getElementById('true').classList.remove('hidden');
@@ -92,6 +93,7 @@ function assemble() {
 		document.getElementById('B').classList.remove('hidden');
 		document.getElementById('C').classList.remove('hidden');
 		document.getElementById('D').classList.remove('hidden');
+		document.getElementById('nextQ').classList.add('hidden');
 	}
 	function correct() {
 		currentUser.corQs+=1;
@@ -213,7 +215,7 @@ function assemble() {
 			}
 		})
 	}
-	currentUser = currentUser;
+	// currentUser = currentUser;
 }
 
 $(document).ready(function() {
@@ -231,7 +233,7 @@ $(document).ready(function() {
 	})
 	document.getElementById('nextQ').addEventListener('click', function() {
 		currentUser.totQs+=1;
-		currentUser.perc= Math.round((currentUser.corQs/currentUser.totQs)*100);
+		currentUser.perc= Math.round(((currentUser.corQs/currentUser.totQs)*100));
 		document.getElementById('userName').innerHTML = currentUser.name;
 		document.getElementById('totQs').innerHTML = currentUser.totQs;
 		document.getElementById('perc').innerHTML = currentUser.perc;
