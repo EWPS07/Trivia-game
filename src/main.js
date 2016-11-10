@@ -96,10 +96,10 @@ function assemble() {
 		document.getElementById('nextQ').classList.add('hidden');
 	}
 	function correct() {
-		currentUser.corQs+=1;
+		return currentUser.corQs+=1;
 	}
 	function incorrect() {
-		currentUser.inQs+=1;
+		return currentUser.inQs+=1;
 	}
 	showBtns();
 	document.getElementById('category').innerHTML = questions[count].category;
