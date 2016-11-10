@@ -511,12 +511,12 @@ $(document).ready(function() {
 	document.getElementById('playNow').addEventListener('click', function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
 		function loaded() {
-			if(questions.length>0) {
+			if(questions !== []) {
 				document.getElementById('game').classList.remove('hidden');
 				document.getElementById('loadingMessage').classList.add('hidden');
+				return;
 			}
 			else {
-				document.getElementById('loadingMessage').classList.remove('hidden');
 				loaded();
 			}
 		}
