@@ -1,128 +1,200 @@
 /*html elements*/
 body {
-	background-color: white;
-	color: black;
+	font-family: 'Advent Pro', sans-serif;
+	background-color: yellow;
 	height: 100vh;
-	width: 100%;
 }
 small {
-	font-size: 125%;
+	color: white;
 	font-style: italic;
 }
 header {
-	height: 20%;
-	border-bottom: solid black 2px;
-	padding-top: 3%;
+	padding-top: 2.5%;
+	height: 15%;
 	background-color: black;
-	color: white;
 }
 main {
-	height: 60%;
-	margin: 5%;
+	height: 75%;
 }
 footer {
 	height: 10%;
-	background-color: black;
 	color: white;
+	background-color: black;
 }
 
 /* classes */
-.game {
-	background-color: black;
-	color: white;
+.logo {
 	font-weight: bolder;
-	outline: none;
-	border: none;
-}
-.game:hover, .game:focus, .game:visited {
-	font-weight: bolder;
-	outline: none;
-	border: none;
-}
-.mc {
-	height: 100%;
-	width: 100%;
-	padding: none;
-	margin: none;
-}
-.noClick {
-	pointer-events: none;
+	font-style: italic;
+	padding-right: 1%;
+	padding-left: 1%;
 }
 /* id's */
 #title {
-	color:black;
+	color: black;
 	background-color: yellow;
-	font-size: 400%;
+	font-size: 200%;
 	font-weight: bolder;
-	margin-left: 9%;
 }
 #loginSignup {
 	padding: 10%;
-	margin-right: 20%;
-	margin-left: 20%;
+	padding-top: 20%;
+}
+#loginModule button, #signUpModule button {
+	background-color: black;
+	color: yellow;
+	width: 25%;
+	outline: none;
+}
+#loginModule button:focus, #signUpModule button:focus {
+	outline: none;
+}
+#loginModule input, #signUpModule input {
+	background-color: transparent;
+	color: black;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	border-bottom: solid black 1px;
+	border-radius: 0;
+	padding-bottom: 0;
+}
+#loginModule input:focus, #signUpModule input:focus {
+	background-color: transparent;
+	color: black;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	border-bottom: solid black 1px;
+	border-radius: 0;
+	padding-bottom: 0;
+}
+#newUser, #back {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+#newUser:hover, #back:hover {
+	color: yellow;
+	background-color: black;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 #welcomeMessage {
-	margin-right: 20%;
-	margin-left: 20%;
+	font-size: 125%;
+	font-weight: bolder;
+	color: black;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+}
+#welcomeHighlight {
+	font-style: italic;
+	font-weight: bold;
+	color: yellow;
+	background-color: black;
+}
+#playNow, #playNow:focus, #nextQ, #nextQ:focus, #true, #true:focus, #false, #false:focus, #A, #A:focus, #B, #B:focus, #C, #C:focus, #D, #D:focus {
+	background-color: black;
+	color: yellow;
+	outline: none;
 }
 #userStats {
-	margin-left: 9%;
+	color: white;
 }
 #userInfo {
-	margin-bottom: 0;
-	font-size: 120%;
+
+}
+#loadingMessage {
+	color: black;
 }
 #game {
-	padding: 2.5%;
+	font-family: 'Advent Pro', sans-serif;
 	height: 100%;
 	width: 100%;
-	color: black;
-	background-color: black;
-	border: solid black 5px;
-	border-radius: 10px;
+	padding: none;
+	box-shadow: inset 0px 0px 22px 10px black;
+	padding-top: 1%;
 }
 #triviaTop, #triviaBottom {
-	background-color: black;
-	color: white;
-	height: 5%;
+	color: black;
+	background-color: transparent;
 }
 #triviaTop {
-	font-size: 120%;
-	padding-bottom: 2.5%;
+	height: auto;
+	min-height: 10%;
+	padding-top: 2.5%;
+}
+#triviaBottom {
+	height: auto;
 }
 #category, #difficulty {
-	background-color: yellow;
-	color: black;
-	font-weight: bolder;
-	border: solid yellow 4px;
-	border-radius: 8px;
-}
-#multipleChoice, #trueFalse, #triviaQuestion {
-	background-color: white;
-	height: 45%;
+	color: yellow;
+	background-color: black;
+	margin-top: 1%;
+	padding-left: 1%;
+	padding-right: 1%;
+	border: solid black 2px;
+	border-radius: 4px;
 }
 #triviaQuestion {
-	padding: 2.5%;
+	height: auto;
+	min-height: 20%;
 }
 #multipleChoice, #trueFalse {
-	padding: 5%;
+	height: auto;
+	width: 100%;
+	margin:none;
+	padding: none;
 }
-#nextQ {
+#multipleChoice {
+	min-height: 30%;
+}
+.btn-group-vertical {
+	width: 100%;
+}
+.btn-group-vertical button {
+	width: 100%;
+	height: auto;
+}
+#A:hover, #B:hover, #C:hover, #D:hover, #nexQ:hover {
+	color: black;
+	background-color: yellow;
+	border: solid black 1px;
 }
 #question {
-	font-size: 225%;
-	font-weight: bolder;
+	font-weight: bold;
+	font-size: 150%;
 }
 #response {
-	font-size: 120%;
 	font-style: italic;
+	font-size: 125%;
 	font-weight: bolder;
 }
 
 
-@media only screen and (min-width: 240px) and (max-width: 683px) and (min-resolution: 1dppx) {
-	header, main, footer, #loginSignup, #welcomeMessage, #loadingMessage {
-		margin: none;
-		padding: none;
+@media all and (min-width: 683px) {
+	#title {
+		font-size: 400%;
+	}
+	#loginSignup {
+		margin-left: 30%;
+		margin-right: 30%;
+		padding-top: 15%;
+	}
+	#welcomeMessage {
+		font-size: 200%;
+		font-weight: bolder;
+		color: black;
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		right: 0;
 	}
 }

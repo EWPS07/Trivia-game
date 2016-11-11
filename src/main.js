@@ -42,7 +42,6 @@ $(document).ready(function() {
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
-				document.getElementById('userStats').classList.remove('hidden');
 				console.log('from login', currentUser);
 				return currentUser;
 			}
@@ -74,7 +73,6 @@ $(document).ready(function() {
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
-				document.getElementById('userStats').classList.remove('hidden');
 				console.log('from signup', currentUser);
 				return currentUser;
 			}
@@ -234,15 +232,24 @@ $(document).ready(function() {
 	document.getElementById('login').addEventListener('click', login);
 	
 	document.getElementById('newUser').addEventListener('click', function() {
-		this.classList.add('hidden');
+		document.getElementById('toSignup').classList.add('hidden');
 		document.getElementById('loginModule').classList.add('hidden');
 		document.getElementById('signUpModule').classList.remove('hidden');
+		document.getElementById('back').classList.remove('hidden');
 	})
 	
+	document.getElementById('back').addEventListener('click', function() {
+		this.classList.add('hidden');
+		document.getElementById('loginModule').classList.remove('hidden');
+		document.getElementById('signUpModule').classList.add('hidden');
+		document.getElementById('toSignup').classList.remove('hidden');
+	})
+
 	document.getElementById('playNow').addEventListener('click', function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
+		document.getElementById('userStats').classList.remove('hidden');
 		function loaded() {
-			if(questions !== []) {
+			if(questions.length === 50) {
 				document.getElementById('game').classList.remove('hidden');
 				document.getElementById('loadingMessage').classList.add('hidden');
 				return;
@@ -270,7 +277,7 @@ $(document).ready(function() {
 		Lockr.set(currentUser.name, currentUser);
 		console.log(currentUser);
 		count+=1;
-		if(count === 10) {
+		if(count === 50) {
 			count=0;
 			getQuestions();
 		}
