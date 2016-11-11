@@ -99,7 +99,7 @@ $(document).ready(function() {
 			document.getElementById('B').classList.add('hidden');
 			document.getElementById('C').classList.add('hidden');
 			document.getElementById('D').classList.add('hidden');
-			document.getElementById('nextQ').classList.remove('hidden');
+			document.getElementById('triviaBottom').classList.remove('hidden');
 		}
 		function showBtns() {
 			document.getElementById('true').classList.remove('hidden');
@@ -108,7 +108,7 @@ $(document).ready(function() {
 			document.getElementById('B').classList.remove('hidden');
 			document.getElementById('C').classList.remove('hidden');
 			document.getElementById('D').classList.remove('hidden');
-			document.getElementById('nextQ').classList.add('hidden');
+			document.getElementById('triviaBottom').classList.add('hidden');
 		}
 		showBtns();
 		document.getElementById('category').innerHTML = questions[count].category;

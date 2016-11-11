@@ -7,17 +7,21 @@ body {
 small {
 	color: white;
 	font-style: italic;
+	font-size: 150%;
 }
 header {
-	padding-top: 2.5%;
-	height: 15%;
+	padding: 2.5%;
+	height: auto;
 	background-color: black;
+	font-size: 100%;
 }
 main {
 	height: 75%;
+	/*height: auto;*/
 }
 footer {
-	height: 10%;
+	/*height: 10%;*/
+	height: auto;
 	color: white;
 	background-color: black;
 }
@@ -26,30 +30,37 @@ footer {
 .logo {
 	font-weight: bolder;
 	font-style: italic;
-	padding-right: 1%;
-	padding-left: 1%;
+	padding-right: 2%;
+	padding-left: 2%;
 }
 /* id's */
 #title {
 	color: black;
 	background-color: yellow;
-	font-size: 200%;
+	font-size: 400%;
 	font-weight: bolder;
 }
 #loginSignup {
+	font-size: 200%;
 	padding: 10%;
 	padding-top: 20%;
 }
-#loginModule button, #signUpModule button {
+#loginModule button,
+#signUpModule button {
+	font-size: 100%;
 	background-color: black;
 	color: yellow;
-	width: 25%;
+	width: 33%;
+	height: auto;
 	outline: none;
 }
-#loginModule button:focus, #signUpModule button:focus {
+#loginModule button:focus,
+#signUpModule button:focus {
 	outline: none;
 }
-#loginModule input, #signUpModule input {
+#loginModule input,
+#signUpModule input {
+	font-size: 100%;
 	background-color: transparent;
 	color: black;
 	border: none;
@@ -59,7 +70,8 @@ footer {
 	border-radius: 0;
 	padding-bottom: 0;
 }
-#loginModule input:focus, #signUpModule input:focus {
+#loginModule input:focus,
+#signUpModule input:focus {
 	background-color: transparent;
 	color: black;
 	border: none;
@@ -69,28 +81,29 @@ footer {
 	border-radius: 0;
 	padding-bottom: 0;
 }
-#newUser, #back {
+#newUser,
+#back {
 	color: black;
 	font-weight: bold;
 	text-decoration: none;
 
 }
-#newUser:hover, #back:hover {
+#newUser:hover,
+#back:hover {
 	color: yellow;
 	background-color: black;
 	padding-left: 1%;
 	padding-right: 1%;
 }
 #welcomeMessage {
-	font-size: 125%;
+	font-size: 200%;
 	font-weight: bolder;
 	color: black;
 	width: 100%;
 	height: 50%;
-	position: absolute;
-	top: 30%;
-	left: 0;
-	right: 0;
+	margin-top: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 #welcomeHighlight {
 	font-style: italic;
@@ -98,16 +111,25 @@ footer {
 	color: yellow;
 	background-color: black;
 }
-#playNow, #playNow:focus, #nextQ, #nextQ:focus, #true, #true:focus, #false, #false:focus, #A, #A:focus, #B, #B:focus, #C, #C:focus, #D, #D:focus {
+#playNow, #playNow:focus,
+#nextQ, #nextQ:focus,
+#true, #true:focus,
+#false, #false:focus,
+#A, #A:focus,
+#B, #B:focus,
+#C, #C:focus,
+#D, #D:focus {
 	background-color: black;
 	color: yellow;
 	outline: none;
 }
 #userStats {
 	color: white;
+	padding-left: 2%;
+	margin-top: 2%;
 }
 #userInfo {
-
+	font-size: 120%;
 }
 #loadingMessage {
 	color: black;
@@ -120,7 +142,8 @@ footer {
 	box-shadow: inset 0px 0px 22px 10px black;
 	padding-top: 1%;
 }
-#triviaTop, #triviaBottom {
+#triviaTop,
+#triviaBottom {
 	color: black;
 	background-color: transparent;
 }
@@ -129,10 +152,8 @@ footer {
 	min-height: 10%;
 	padding-top: 2.5%;
 }
-#triviaBottom {
-	height: auto;
-}
-#category, #difficulty {
+#category,
+#difficulty {
 	color: yellow;
 	background-color: black;
 	margin-top: 1%;
@@ -143,16 +164,28 @@ footer {
 }
 #triviaQuestion {
 	height: auto;
-	min-height: 20%;
+	min-height: 30%;
 }
-#multipleChoice, #trueFalse {
+#multipleChoice,
+#trueFalse,
+#triviaBottom {
 	height: auto;
 	width: 100%;
 	margin:none;
 	padding: none;
 }
-#multipleChoice {
+#multipleChoice,
+#trueFalse,
+#triviaBottom {
 	min-height: 30%;
+}
+#nextQ {
+	width: 33%;
+	height: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 .btn-group-vertical {
 	width: 100%;
@@ -161,7 +194,13 @@ footer {
 	width: 100%;
 	height: auto;
 }
-#A:hover, #B:hover, #C:hover, #D:hover, #nexQ:hover {
+#A:hover, 
+#B:hover, 
+#C:hover, 
+#D:hover, 
+#true:hover,
+#false:hover,
+#nexQ:hover {
 	color: black;
 	background-color: yellow;
 	border: solid black 1px;
@@ -169,6 +208,7 @@ footer {
 #question {
 	font-weight: bold;
 	font-size: 150%;
+	padding: 2.5%;
 }
 #response {
 	font-style: italic;
@@ -177,10 +217,7 @@ footer {
 }
 
 
-@media all and (min-width: 683px) and (max-resolution: 1dppx) {
-	#title {
-		font-size: 400%;
-	}
+@media all and (min-width: 683px) {
 	#loginSignup {
 		margin-left: 30%;
 		margin-right: 30%;
@@ -196,5 +233,10 @@ footer {
 		top: 30%;
 		left: 0;
 		right: 0;
+	}
+	#game {
+		width: 50%;
+		box-shadow: none;
+		font-size: 150%;
 	}
 }
