@@ -42,7 +42,6 @@ $(document).ready(function() {
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
-				console.log('from login', currentUser);
 				return currentUser;
 			}
 			else {
@@ -65,7 +64,6 @@ $(document).ready(function() {
 			// make sure the user confirmed password correctly
 			if(pass === passCon) {
 				currentUser = new User(name, pass, 0, 0, 0);
-				console.log('from signup', currentUser);
 				Lockr.set(name, currentUser);
 				// currentUser = Lockr.get(name);
 				document.getElementById('loginSignup').classList.add('hidden');
@@ -73,7 +71,6 @@ $(document).ready(function() {
 				document.getElementById('userName').innerHTML = currentUser.name;
 				document.getElementById('totQs').innerHTML = currentUser.totQs;
 				document.getElementById('perc').innerHTML = currentUser.perc;
-				console.log('from signup', currentUser);
 				return currentUser;
 			}
 			else {
@@ -89,7 +86,6 @@ $(document).ready(function() {
 	// assemble question UI --------------------------------------------
 	var count = 0;
 	var answeredCorrect;
-	console.log('from assemble', currentUser);
 	function assemble() {
 		answeredCorrect = false;
 		function hideBtns() {
@@ -222,7 +218,6 @@ $(document).ready(function() {
 				}
 			})
 		}
-		console.log('from end of assemble', currentUser);
 		return (answeredCorrect, currentUser);
 	}
 
@@ -275,7 +270,6 @@ $(document).ready(function() {
 		document.getElementById('totQs').innerHTML = currentUser.totQs;
 		document.getElementById('perc').innerHTML = currentUser.perc;
 		Lockr.set(currentUser.name, currentUser);
-		console.log(currentUser);
 		count+=1;
 		if(count === 50) {
 			count=0;

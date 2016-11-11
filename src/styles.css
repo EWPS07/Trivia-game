@@ -17,10 +17,8 @@ header {
 }
 main {
 	height: 75%;
-	/*height: auto;*/
 }
 footer {
-	/*height: 10%;*/
 	height: auto;
 	color: white;
 	background-color: black;
@@ -37,8 +35,9 @@ footer {
 #title {
 	color: black;
 	background-color: yellow;
-	font-size: 400%;
+	font-size: 300%;
 	font-weight: bolder;
+	margin-left: 2%; 
 }
 #loginSignup {
 	font-size: 200%;
@@ -96,7 +95,7 @@ footer {
 	padding-right: 1%;
 }
 #welcomeMessage {
-	font-size: 200%;
+	font-size: 175%;
 	font-weight: bolder;
 	color: black;
 	width: 100%;
@@ -180,8 +179,6 @@ footer {
 	min-height: 30%;
 }
 #nextQ {
-	width: 33%;
-	height: auto;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -209,6 +206,7 @@ footer {
 	font-weight: bold;
 	font-size: 150%;
 	padding: 2.5%;
+	padding-top: 3%;
 }
 #response {
 	font-style: italic;
@@ -216,8 +214,9 @@ footer {
 	font-weight: bolder;
 }
 
+/* Desktop -------------------------------*/
 
-@media all and (min-width: 683px) {
+@media all and (min-width: 950px) {
 	#loginSignup {
 		margin-left: 30%;
 		margin-right: 30%;
