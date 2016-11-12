@@ -1,6 +1,22 @@
 
 
 $(document).ready(function() {
+	// helper function for logging screen height width
+	var onresize = function() {
+	   var width = window.innerWidth
+	   || document.documentElement.clientWidth
+	   || document.body.clientWidth;
+	   var height = window.innerHeight
+	   || document.documentElement.clientHeight
+	   || document.body.clientHeight;
+	   console.log('height', height);
+	   console.log('width', width);
+	}
+	$(window).resize(function() {
+		onresize();
+	});
+	// helper function for logging screen height width
+
 
 	// User constructor -------------------------------------
 	var User = function(name, pass, totQs, corQs, perc) {
