@@ -60,7 +60,7 @@ footer {
 #loginModule input,
 #signUpModule input {
 	height: auto;
-	font-size: 100%;
+	font-size: 200%;
 	background-color: transparent;
 	color: black;
 	border: none;
@@ -96,7 +96,7 @@ footer {
 	padding-right: 1%;
 }
 #welcomeMessage {
-	font-size: 175%;
+	font-size: 200%;
 	font-weight: bolder;
 	color: black;
 	width: 100%;
@@ -136,6 +136,7 @@ footer {
 }
 #game {
 	font-family: 'Advent Pro', sans-serif;
+	font-size: 200%;
 	height: 100%;
 	width: 100%;
 	padding: none;
@@ -154,6 +155,7 @@ footer {
 }
 #category,
 #difficulty {
+	font-size: 50%;
 	color: yellow;
 	background-color: black;
 	margin-top: 1%;
@@ -205,23 +207,24 @@ footer {
 }
 #question {
 	font-weight: bold;
-	font-size: 150%;
 	padding: 2.5%;
 	padding-top: 3%;
 }
 #response {
 	font-style: italic;
-	font-size: 125%;
 	font-weight: bolder;
 }
 
 /* Desktop -------------------------------*/
 
-@media all and (min-width: 950px) and (max-resolution: 1.5dppx) {
+@media all and (min-width: 950px) and (max-resolution: 2dppx) {
 	#loginSignup {
 		margin-left: 30%;
 		margin-right: 30%;
 		padding-top: 15%;
+	}
+	input {
+		font-size: 25%;
 	}
 	#welcomeMessage {
 		font-size: 200%;
