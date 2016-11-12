@@ -105,35 +105,27 @@ $(document).ready(function() {
 	function assemble() {
 		answeredCorrect = false;
 		function hideBtns() {
-			document.getElementById('true').classList.add('hidden');
-			document.getElementById('false').classList.add('hidden');
-			document.getElementById('A').classList.add('hidden');
-			document.getElementById('B').classList.add('hidden');
-			document.getElementById('C').classList.add('hidden');
-			document.getElementById('D').classList.add('hidden');
+			document.getElementById('trueFalse').classList.add('hidden');
+			document.getElementById('multipleChoice').classList.add('hidden');
 			document.getElementById('triviaBottom').classList.remove('hidden');
 		}
-		function showBtns() {
-			document.getElementById('true').classList.remove('hidden');
-			document.getElementById('false').classList.remove('hidden');
-			document.getElementById('A').classList.remove('hidden');
-			document.getElementById('B').classList.remove('hidden');
-			document.getElementById('C').classList.remove('hidden');
-			document.getElementById('D').classList.remove('hidden');
+		function showTrueFalse() {
+			document.getElementById('trueFalse').classList.remove('hidden');
 			document.getElementById('triviaBottom').classList.add('hidden');
 		}
-		showBtns();
+		function showMultipleChoice() {
+			document.getElementById('multipleChoice').classList.remove('hidden');
+			document.getElementById('triviaBottom').classList.add('hidden');
+		}
+		// showBtns();
 		document.getElementById('category').innerHTML = questions[count].category;
 		document.getElementById('difficulty').innerHTML = questions[count].difficulty;
 		document.getElementById('question').innerHTML = questions[count].question;
 		document.getElementById('response').classList.add('hidden');
-		
+		hideBtns();
 		// check question format ------------------
 		if(questions[count].type === 'boolean') {
-			document.getElementById('multipleChoice').classList.add('hidden');
-			document.getElementById('multipleChoice').classList.add('noClick');
-			document.getElementById('trueFalse').classList.remove('hidden');
-			document.getElementById('trueFalse').classList.remove('noClick');
+			showTrueFalse();
 			
 			let T = document.getElementById('true');
 			let F = document.getElementById('false');
@@ -165,10 +157,7 @@ $(document).ready(function() {
 			})
 		}
 		else {
-			document.getElementById('multipleChoice').classList.remove('hidden');
-			document.getElementById('multipleChoice').classList.remove('noClick');
-			document.getElementById('trueFalse').classList.add('hidden');
-			document.getElementById('trueFalse').classList.add('noClick');
+			showMultipleChoice();
 			
 			let possibleAnswers = questions[count].incorrect_answers;
 			
