@@ -21,23 +21,10 @@ footer {
 	background-color: black;
 }
 
-
-
-
-
-
-
-
-
 .logo {
 	font-weight: bolder;
 	font-style: italic;
 }
-
-
-
-
-
 
 #title {
 	color: black;
@@ -175,81 +162,9 @@ footer {
 }
 
 
-
-
-/************************************************************************************************/
-
-
-
-/* Desktop -------------------------------*/
-
-/*@media all and (min-width: 950px) and (max-resolution: 2dppx) {
-	#loginSignup {
-		margin-left: 30%;
-		margin-right: 30%;
-		padding-top: 15%;
-	}
-	input {
-		font-size: 25%;
-	}
-	#welcomeMessage {
-		font-size: 200%;
-		font-weight: bolder;
-		color: black;
-		width: 100%;
-		height: 50%;
-		position: absolute;
-		top: 30%;
-		left: 0;
-		right: 0;
-	}
-	#game {
-		width: 50%;
-		box-shadow: none;
-		font-size: 150%;
-	}
-}*/
-
-
-/*RESPONSIVE DESIGN.is
-
-SEARCH
-DESIGN
-DEVELOP
-ARTICLES
-RESOURCES
-EXAMPLES
-PATTERNS
-PODCAST
-RESPONSIVE WEB DESIGNDEVELOPBROWSER SUPPORT
-DEVELOP
-RESPONSIVE HTMLCSSFRAMEWORKSJAVASCRIPTBROWSER SUPPORT
-@MEDIA DEVICE BREAKPOINTSCAN I USE?RESPONSIVE MEDIATYPOGRAPHYTESTINGSASS & MIXINS
-AD
-
-Bitbucket:
-Coders gonna code. Start a free trial of Bitbucket Server and get your shirt.
-MEDIA QUERIES FOR COMMON DEVICE BREAKPOINTS
-
-The @media query is 1/3 of the recipe for responsive design. It is the key ingredient that, in it's simplest form, allows specified CSS to be applied depending on the device and whether it matches the media query criteria.
-
- 
-
-Before you start copying and pasting below, read why you don't need device specific viewports.*/
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen
+/*@media only screen
 and (min-width : 320px) 
 and (max-width: 768px) {
-	/* Styles */
-	/*html elements*/
 	body {
 		height: 100vh;
 	}
@@ -269,12 +184,10 @@ and (max-width: 768px) {
 		height: 5%;
 	}
 
-	/* classes */
 	.logo {
 		padding-right: 2%;
 		padding-left: 2%;
 	}
-	/* id's */
 	#title {
 		font-size: 275%;
 		margin-left: 2%; 
@@ -343,7 +256,6 @@ and (max-width: 768px) {
 		height: 10%;
 	}
 	#triviaTop {
-		/*padding-top: 2.5%;*/
 	}
 	#category,
 	#difficulty {
@@ -396,15 +308,13 @@ and (max-width: 768px) {
 	}
 	#response {
 	}
-}
+}*/
 
 
-@media only screen
+/*@media only screen
 and (min-width : 320px) 
 and (max-width: 768px)
 and (min-resolution: 2dppx){
-	/* Styles */
-	/*html elements*/
 	body {
 		height: 100vh;
 	}
@@ -423,13 +333,10 @@ and (min-resolution: 2dppx){
 	footer {
 		height: 5%;
 	}
-
-	/* classes */
 	.logo {
 		padding-right: 2%;
 		padding-left: 2%;
 	}
-	/* id's */
 	#title {
 		font-size: 275%;
 		margin-left: 2%; 
@@ -498,7 +405,6 @@ and (min-resolution: 2dppx){
 		height: 10%;
 	}
 	#triviaTop {
-		/*padding-top: 2.5%;*/
 	}
 	#category,
 	#difficulty {
@@ -558,8 +464,6 @@ and (min-width : 320px)
 and (max-width: 768px)
 and (orientation: portrait)
 and (min-resolution: 2dppx){
-	/* Styles */
-	/*html elements*/
 	body {
 		height: 100vh;
 	}
@@ -579,12 +483,10 @@ and (min-resolution: 2dppx){
 		height: 5%;
 	}
 
-	/* classes */
 	.logo {
 		padding-right: 2%;
 		padding-left: 2%;
 	}
-	/* id's */
 	#title {
 		font-size: 275%;
 		margin-left: 2%; 
@@ -653,7 +555,6 @@ and (min-resolution: 2dppx){
 		height: 10%;
 	}
 	#triviaTop {
-		/*padding-top: 2.5%;*/
 	}
 	#category,
 	#difficulty {
@@ -713,9 +614,203 @@ and (min-width : 320px)
 and (max-width: 768px)
 and (orientation: landscape)
 and (min-resolution: 2dppx){
-	/* Styles */
-	/*html elements*/
 	body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width : 321px) 
+and (max-width: 480px) {
+body {
 		height: 100vh;
 	}
 	small {
@@ -861,71 +956,307 @@ and (min-resolution: 2dppx){
 	}
 	#response {
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen
-and (min-width : 321px) 
-and (max-width: 480px) {
-/* Smartphones (portrait) ----------- */
 }
 @media only screen
 and (max-width : 320px) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPads (landscape) ----------- */
@@ -933,7 +1264,152 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPads (portrait) ----------- */
@@ -941,7 +1417,152 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 /**********
 iPad 3
@@ -951,7 +1572,152 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) 
 and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -979,7 +1745,152 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) 
 and (orientation : landscape) 
 and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -987,7 +1898,152 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) 
 and (orientation : portrait) 
 and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPhone 5 ----------- */
@@ -996,7 +2052,152 @@ and (min-device-width: 320px)
 and (max-device-height: 568px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1004,7 +2205,152 @@ and (min-device-width: 320px)
 and (max-device-height: 568px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPhone 6 ----------- */
@@ -1013,7 +2359,152 @@ and (min-device-width: 375px)
 and (max-device-height: 667px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1021,7 +2512,152 @@ and (min-device-width: 375px)
 and (max-device-height: 667px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* iPhone 6+ ----------- */
@@ -1030,7 +2666,152 @@ and (min-device-width: 414px)
 and (max-device-height: 736px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1038,7 +2819,152 @@ and (min-device-width: 414px)
 and (max-device-height: 736px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* Samsung Galaxy S3 ----------- */
@@ -1047,7 +2973,152 @@ and (min-device-width: 320px)
 and (max-device-height: 640px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1055,7 +3126,152 @@ and (min-device-width: 320px)
 and (max-device-height: 640px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 2){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* Samsung Galaxy S4 ----------- */
@@ -1064,7 +3280,152 @@ and (min-device-width: 320px)
 and (max-device-height: 640px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1072,7 +3433,152 @@ and (min-device-width: 320px)
 and (max-device-height: 640px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 /* Samsung Galaxy S5 ----------- */
@@ -1081,7 +3587,152 @@ and (min-device-width: 360px)
 and (max-device-height: 640px) 
 and (orientation : landscape) 
 and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
 
 @media only screen 
@@ -1089,5 +3740,150 @@ and (min-device-width: 360px)
 and (max-device-height: 640px) 
 and (orientation : portrait) 
 and (-webkit-device-pixel-ratio: 3){
-/* Styles */
+body {
+		height: 100vh;
+	}
+	small {
+		font-size: 100%;
+	}
+	header {
+		padding: 2.5%;
+		padding-top: none;
+		height: 20%;
+		font-size: 100%;
+	}
+	main {
+		height: 75%;
+	}
+	footer {
+		height: 5%;
+	}
+
+	/* classes */
+	.logo {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+	/* id's */
+	#title {
+		font-size: 275%;
+		margin-left: 2%; 
+	}
+	#loginSignup {
+		font-size: 200%;
+		padding-top: 10%;
+	}
+	#loginModule button,
+	#signUpModule button {
+		font-size: 75%;
+		width: 33%;
+		height: auto;
+	}
+	#loginModule input,
+	#signUpModule input {
+		height: auto;
+		font-size: 150%;
+	}
+	#loginModule input:focus,
+	#signUpModule input:focus {
+		border-radius: 0;
+		padding-bottom: 0;
+	}
+	#newUser,
+	#back {
+
+	}
+	#newUser:hover,
+	#back:hover {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#welcomeMessage {
+		font-size: 150%;
+		width: 100%;
+		height: 50%;
+		margin-top: 10%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5%;
+	}
+	#playNow {
+		margin-top: 0;
+		margin-bottom: 8%;
+	}
+	#welcomeHighlight {
+	}
+	#userStats {
+		padding-left: 2%;
+		margin-top: 2%;
+	}
+	#userInfo {
+		font-size: 80%;
+	}
+	#loadingMessage {
+	}
+	#game {
+		height: 100%;
+		width: 100%;
+		padding: none;
+		padding-top: 2.5%;
+	}
+	#triviaTop,
+	#triviaBottom {
+		height: 10%;
+	}
+	#triviaTop {
+		/*padding-top: 2.5%;*/
+	}
+	#category,
+	#difficulty {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#triviaQuestion,
+	#multipleChoice,
+	#trueFalse {
+		height: 40%;
+	}
+	#multipleChoice,
+	#trueFalse,
+	#triviaBottom {
+		font-size: auto;
+		width: 100%;
+		margin:none;
+		padding: none;
+	}
+	#triviaBottom {
+		padding-bottom: 5%;
+	}
+	#nextQ {
+	}
+	.btn-group-vertical {
+		width: 100%;
+		height: inherit;
+	}
+	.btn-group-vertical button {
+		font-weight: bolder;
+		border-bottom: solid 2px yellow;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 100%;
+		font-size: 100%;
+		height: auto;
+	}
+	#A:hover, 
+	#B:hover, 
+	#C:hover, 
+	#D:hover, 
+	#true:hover,
+	#false:hover,
+	#nexQ:hover {
+		border: none;
+	}
+	#question {
+		font-size: 150%;
+		padding-top: 5%;
+	}
+	#response {
+	}
 }
