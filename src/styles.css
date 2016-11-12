@@ -41,8 +41,8 @@ footer {
 }
 #loginSignup {
 	font-size: 200%;
-	padding: 10%;
-	padding-top: 20%;
+	/*padding: 10%;*/
+	padding-top: 10%;
 }
 #loginModule button,
 #signUpModule button {
@@ -217,7 +217,7 @@ footer {
 
 /* Desktop -------------------------------*/
 
-@media all and (min-width: 950px) and (max-resolution: 2dppx) {
+@media all and (min-width: 950px) and (max-resolution: 1.5dppx) {
 	#loginSignup {
 		margin-left: 30%;
 		margin-right: 30%;
