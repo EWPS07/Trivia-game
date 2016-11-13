@@ -172,23 +172,28 @@ $(document).ready(function() {
 			showMultipleChoice();
 			
 			let possibleAnswers = questions[count].incorrect_answers;
-			
-			possibleAnswers.push(questions[count].correct_answer);
+			for(var i=0;i<possibleAnswers.length;i++) {
+				possibleAnswers[i] = [possibleAnswers[i], i+1];
+			}
+			let rightAnswer = [questions[count].correct_answer, 0];
+			possibleAnswers.push(rightAnswer);
+			console.log(possibleAnswers);
 			possibleAnswers.sort();
+			console.log(possibleAnswers);
 
 			let A = document.getElementById('A');
 			let B = document.getElementById('B');
 			let C = document.getElementById('C');
 			let D = document.getElementById('D');
 			
-			A.innerHTML = possibleAnswers[0];
-			B.innerHTML = possibleAnswers[1];
-			C.innerHTML = possibleAnswers[2];
-			D.innerHTML = possibleAnswers[3];
+			A.innerHTML = possibleAnswers[0][0];
+			B.innerHTML = possibleAnswers[1][0];
+			C.innerHTML = possibleAnswers[2][0];
+			D.innerHTML = possibleAnswers[3][0];
 			
 			A.addEventListener('click', function() {
 				hideBtns();
-				if(A.innerHTML === questions[count].correct_answer) {
+				if(possibleAnswers[0][1] === 0) {
 					response.innerHTML = 'Correct!';
 					response.classList.remove('hidden');
 					answeredCorrect = true;
@@ -200,7 +205,7 @@ $(document).ready(function() {
 			})
 			B.addEventListener('click', function() {
 				hideBtns();
-				if(B.innerHTML === questions[count].correct_answer) {
+				if(possibleAnswers[1][1] === 0) {
 					response.innerHTML = 'Correct!';
 					response.classList.remove('hidden');
 					answeredCorrect = true;
@@ -212,7 +217,7 @@ $(document).ready(function() {
 			})
 			C.addEventListener('click', function() {
 				hideBtns();
-				if(C.innerHTML === questions[count].correct_answer) {
+				if(possibleAnswers[2][1] === 0) {
 					response.innerHTML = 'Correct!';
 					response.classList.remove('hidden');
 					answeredCorrect = true;
@@ -224,7 +229,7 @@ $(document).ready(function() {
 			})
 			D.addEventListener('click', function() {
 				hideBtns();
-				if(D.innerHTML === questions[count].correct_answer) {
+				if(possibleAnswers[3][1] === 0) {
 					response.innerHTML = 'Correct!';
 					response.classList.remove('hidden');
 					answeredCorrect = true;
