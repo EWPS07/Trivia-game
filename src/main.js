@@ -107,17 +107,16 @@ $(document).ready(function() {
 		function hideBtns() {
 			document.getElementById('trueFalse').classList.add('hidden');
 			document.getElementById('multipleChoice').classList.add('hidden');
-			document.getElementById('triviaBottom').classList.remove('hidden');
+			document.getElementById('next').classList.remove('hidden');
 		}
 		function showTrueFalse() {
 			document.getElementById('trueFalse').classList.remove('hidden');
-			document.getElementById('triviaBottom').classList.add('hidden');
+			document.getElementById('next').classList.add('hidden');
 		}
 		function showMultipleChoice() {
 			document.getElementById('multipleChoice').classList.remove('hidden');
-			document.getElementById('triviaBottom').classList.add('hidden');
+			document.getElementById('next').classList.add('hidden');
 		}
-		// showBtns();
 		document.getElementById('category').innerHTML = questions[count].category;
 		document.getElementById('difficulty').innerHTML = questions[count].difficulty;
 		document.getElementById('question').innerHTML = questions[count].question;

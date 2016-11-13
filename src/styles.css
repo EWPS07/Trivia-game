@@ -1,8 +1,11 @@
 
 /************************************************************************************************/
 
-.test {
-	border: solid black 2px;
+.noMorP {
+	margin-left: none;
+	margin-right: none;
+	padding-left: none;
+	padding-right: none;
 }
 /*html elements*/
 body {
@@ -41,16 +44,20 @@ footer {
 	padding-left: 2%;
 	padding-right: 2%;
 }
-
+.mc {
+	width: 100%;	
+}
 #title {
-	font-size: 7vh;
+	font-size: 5vh;
 	color: black;
 	background-color: yellow;
 	font-weight: bolder;
 	padding-right: 2%;
 	padding-left: 2%;
+	margin-top: 5%;
 }
 #loginSignup {
+	padding-top: 10%;
 }
 #loginModule button,
 #signUpModule button {
@@ -109,6 +116,7 @@ footer {
 	padding-left: 10%;
 	padding-right: 10%;
 	color: black;
+	height: 100%;
 }
 #welcomeTop {
 	line-height: 300%;
@@ -134,11 +142,13 @@ footer {
 }
 #userStats {
 	color: white;
+	font-size: 2vh;
 }
 #totQs, #perc, #userName {
 	color: yellow;
 }
 #userInfo {
+	margin-top: 10%;
 }
 #loadingMessage {
 	font-size: 5vh;
@@ -146,31 +156,56 @@ footer {
 }
 #game {
 	margin: none;
-	padding: 5%;
+	padding: none;
 	font-family: 'Advent Pro', sans-serif;
 	height: 100%;
+	width: 100%;
 }
 #triviaTop,
-#triviaBottom {
+#next {
 	color: black;
 	background-color: transparent;
 }
 #triviaTop {
+	width: 100%;
+	height: 30%;
+	padding-top: 1%;
+	margin-bottom: 4%;
+}
+}
+#triviaQuestion, #trueFalse, #multipleChoice, #next {
+	width: 100%;
+	height: 35%;
+}
+#multipleChoice, #trueFalse {
+	padding-top: 5%;
+	margin: none;
+	font-size: auto;
+}
+#triviaQuestion {
+	padding-top: 8%;
+	padding-bottom: 2.5%;
 }
 #category,
 #difficulty {
+	font-size: 2vh;
+	margin-left: none;
+	padding-left: none;
+	margin-right: none;
+	padding-right: none;
 	color: yellow;
 	background-color: black;
 	border: solid black 2px;
 	border-radius: 4px;
-}
-#nextQ {
-
+	position: relative;
+	top: 0;
 }
 .btn-group-vertical {
+	padding-top: 2.5%;
 }
 .btn-group-vertical button {
-
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
 }
 #A:hover, 
 #B:hover, 
@@ -178,17 +213,20 @@ footer {
 #D:hover, 
 #true:hover,
 #false:hover,
-#nexQ:hover {
+#nextQ:hover {
 	color: black;
 	background-color: yellow;
 	border: solid black 1px;
 }
 #question {
-	font-size: 4vh;
+	height: 75%;
+	font-size: 3.5vh;
 	font-weight: bold;
+	margin: 1%;
 }
 #response {
-	font-size: 3vh;
+	height: 25%;
+	font-size: 2.5vh;
 	font-style: italic;
 	font-weight: bolder;
 }
