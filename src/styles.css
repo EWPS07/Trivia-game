@@ -207,6 +207,10 @@ footer {
 	padding-left: auto;
 	margin-left: none;
 	margin-right: none;
+	margin-top: none;
+	margin-bottom: none;
+	padding-top: none;
+	padding-bottom: none;
 }
 .btn-group-vertical, #question, #nextQ {
 	max-width: inherit;
