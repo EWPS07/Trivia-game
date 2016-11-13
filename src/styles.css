@@ -89,7 +89,7 @@ footer {
 	box-shadow: none;
 	border-bottom: solid black 1px;
 }
-#login, #signUp {
+#loginBtn, #signUpBtn {
 	font-weight: bolder;
 	margin-top: 5%;
 	width: 25%;

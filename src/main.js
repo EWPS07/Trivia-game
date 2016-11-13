@@ -44,6 +44,12 @@ $(document).ready(function() {
 		})
 	}
 
+	let loginSignup = document.getElementById('loginSignup');
+	let welcomeMessage = document.getElementById('welcomeMessage');
+	let userName = document.getElementById('userName');
+	let totQs = document.getElementById('totQs');
+	let perc = document.getElementById('perc');
+
 	// login function --------------------------------------------
 	function login(event) {
 		event.preventDefault();
@@ -53,11 +59,11 @@ $(document).ready(function() {
 			currentUser = Lockr.get(name);
 			// check if name and password are connected
 			if(currentUser.name === name && currentUser.pass === pass) {
-				document.getElementById('loginSignup').classList.add('hidden');
-				document.getElementById('welcomeMessage').classList.remove('hidden');
-				document.getElementById('userName').innerHTML = currentUser.name;
-				document.getElementById('totQs').innerHTML = currentUser.totQs;
-				document.getElementById('perc').innerHTML = currentUser.perc;
+				loginSignup.classList.add('hidden');
+				welcomeMessage.classList.remove('hidden');
+				userName.innerHTML = currentUser.name;
+				totQs.innerHTML = currentUser.totQs;
+				perc.innerHTML = currentUser.perc;
 				return currentUser;
 			}
 			else {
@@ -82,11 +88,11 @@ $(document).ready(function() {
 				currentUser = new User(name, pass, 0, 0, 0);
 				Lockr.set(name, currentUser);
 				// currentUser = Lockr.get(name);
-				document.getElementById('loginSignup').classList.add('hidden');
-				document.getElementById('welcomeMessage').classList.remove('hidden');
-				document.getElementById('userName').innerHTML = currentUser.name;
-				document.getElementById('totQs').innerHTML = currentUser.totQs;
-				document.getElementById('perc').innerHTML = currentUser.perc;
+				loginSignup.classList.add('hidden');
+				welcomeMessage.classList.remove('hidden');
+				userNameinnerHTML = currentUser.name;
+				totQs.innerHTML = currentUser.totQs;
+				perc.innerHTML = currentUser.perc;
 				return currentUser;
 			}
 			else {
@@ -104,23 +110,30 @@ $(document).ready(function() {
 	var answeredCorrect;
 	function assemble() {
 		answeredCorrect = false;
+		let response = document.getElementById('response');
+		let multipleChoice = document.getElementById('multipleChoice')
+		let next = document.getElementById('next');
+		let trueFalse = document.getElementById('trueFalse')
+		let category = document.getElementById('category');
+		let difficulty = document.getElementById('difficulty');
+		let qeustion = document.getElementById('question');
 		function hideBtns() {
-			document.getElementById('trueFalse').classList.add('hidden');
-			document.getElementById('multipleChoice').classList.add('hidden');
-			document.getElementById('next').classList.remove('hidden');
+			trueFalse.classList.add('hidden');
+			multipleChoice.classList.add('hidden');
+			next.classList.remove('hidden');
 		}
 		function showTrueFalse() {
-			document.getElementById('trueFalse').classList.remove('hidden');
-			document.getElementById('next').classList.add('hidden');
+			trueFalse.classList.remove('hidden');
+			next.classList.add('hidden');
 		}
 		function showMultipleChoice() {
-			document.getElementById('multipleChoice').classList.remove('hidden');
-			document.getElementById('next').classList.add('hidden');
+			multipleChoice.classList.remove('hidden');
+			next.classList.add('hidden');
 		}
-		document.getElementById('category').innerHTML = questions[count].category;
-		document.getElementById('difficulty').innerHTML = questions[count].difficulty;
-		document.getElementById('question').innerHTML = questions[count].question;
-		document.getElementById('response').classList.add('hidden');
+		category.innerHTML = questions[count].category;
+		difficulty.innerHTML = questions[count].difficulty;
+		question.innerHTML = questions[count].question;
+		response.classList.add('hidden');
 		hideBtns();
 		// check question format ------------------
 		if(questions[count].type === 'boolean') {
@@ -132,26 +145,26 @@ $(document).ready(function() {
 			T.addEventListener('click', function() {
 				hideBtns();
 				if(T.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'this is true!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'this is true!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, this is false';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, this is false';
+					response.classList.remove('hidden');
 				}
 			})
 
 			F.addEventListener('click', function() {
 				hideBtns();
 				if(F.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'this is false!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'this is false!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, this is true';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, this is true';
+					response.classList.remove('hidden');
 				}
 			})
 		}
@@ -176,49 +189,49 @@ $(document).ready(function() {
 			A.addEventListener('click', function() {
 				hideBtns();
 				if(A.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'Correct!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Correct!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
+					response.classList.remove('hidden');
 				}
 			})
 			B.addEventListener('click', function() {
 				hideBtns();
 				if(B.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'Correct!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Correct!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
+					response.classList.remove('hidden');
 				}
 			})
 			C.addEventListener('click', function() {
 				hideBtns();
 				if(C.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'Correct!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Correct!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
+					response.classList.remove('hidden');
 				}
 			})
 			D.addEventListener('click', function() {
 				hideBtns();
 				if(D.innerHTML === questions[count].correct_answer) {
-					document.getElementById('response').innerHTML = 'Correct!';
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Correct!';
+					response.classList.remove('hidden');
 					answeredCorrect = true;
 				}
 				else {
-					document.getElementById('response').innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
-					document.getElementById('response').classList.remove('hidden');
+					response.innerHTML = 'Sorry, the correct answer is '+questions[count].correct_answer;
+					response.classList.remove('hidden');
 				}
 			})
 		}
@@ -226,21 +239,28 @@ $(document).ready(function() {
 	}
 
 	getQuestions();
-	document.getElementById('signUp').addEventListener('click', signUp);
+	let signUpBtn = document.getElementById('signUp');
+	let loginBtn = document.getElementById('login');
+	let newUser = document.getElementById('newUser');
+	let loginModule = document.getElementById('loginModule');
+	let signUpModule = document.getElementById('signUpModule');
+	let back = document.getElementById('back');
+
+	signUpBtn.addEventListener('click', signUp);
 	
-	document.getElementById('login').addEventListener('click', login);
+	loginBtn.addEventListener('click', login);
 	
-	document.getElementById('newUser').addEventListener('click', function() {
+	newUser.addEventListener('click', function() {
 		document.getElementById('toSignup').classList.add('hidden');
-		document.getElementById('loginModule').classList.add('hidden');
-		document.getElementById('signUpModule').classList.remove('hidden');
-		document.getElementById('back').classList.remove('hidden');
+		loginModule.classList.add('hidden');
+		signUpModule.classList.remove('hidden');
+		back.classList.remove('hidden');
 	})
 	
-	document.getElementById('back').addEventListener('click', function() {
+	back.addEventListener('click', function() {
 		this.classList.add('hidden');
-		document.getElementById('loginModule').classList.remove('hidden');
-		document.getElementById('signUpModule').classList.add('hidden');
+		loginModule.classList.remove('hidden');
+		signUpModule.classList.add('hidden');
 		document.getElementById('toSignup').classList.remove('hidden');
 	})
 
@@ -270,9 +290,9 @@ $(document).ready(function() {
 			currentUser.totQs+=1;
 			currentUser.perc = Math.round((currentUser.corQs/currentUser.totQs) *100)
 		}
-		document.getElementById('userName').innerHTML = currentUser.name;
-		document.getElementById('totQs').innerHTML = currentUser.totQs;
-		document.getElementById('perc').innerHTML = currentUser.perc;
+		userName.innerHTML = currentUser.name;
+		totQs.innerHTML = currentUser.totQs;
+		perc.innerHTML = currentUser.perc;
 		Lockr.set(currentUser.name, currentUser);
 		count+=1;
 		if(count === 50) {
