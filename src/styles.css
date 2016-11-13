@@ -1,38 +1,54 @@
 
 /************************************************************************************************/
 
-
+.test {
+	border: solid black 2px;
+}
 /*html elements*/
 body {
 	font-family: 'Advent Pro', sans-serif;
 	background-color: yellow;
+	margin:none;
+	padding: none;
+	height: 100vh;
 }
-small {
+sub {
 	color: white;
 	font-style: italic;
+	font-size: 2vh;
 }
 header {
 	background-color: black;
 	height: 15%;
+	width: 100%;
 }
 main {
+	margin: none;
+	padding:none;
 	height: 75%;
+	width: 100%;
 }
 footer {
+	height: 10%;
+	width: 100%;
 	color: white;
 	background-color: black;
-	height: 10%;
 }
 
 .logo {
 	font-weight: bolder;
 	font-style: italic;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 #title {
+	font-size: 7vh;
 	color: black;
 	background-color: yellow;
 	font-weight: bolder;
+	padding-right: 2%;
+	padding-left: 2%;
 }
 #loginSignup {
 }
@@ -48,6 +64,7 @@ footer {
 }
 #loginModule input,
 #signUpModule input {
+	font-size: 4vh;
 	background-color: transparent;
 	color: black;
 	border: none;
@@ -65,8 +82,17 @@ footer {
 	box-shadow: none;
 	border-bottom: solid black 1px;
 }
+#login, #signUp {
+	font-weight: bolder;
+	margin-top: 5%;
+	width: 25%;
+}
+#toSignup {
+	font-size: 3vh;
+}
 #newUser,
 #back {
+	font-size: 3vh;
 	color: black;
 	font-weight: bold;
 	text-decoration: none;
@@ -78,12 +104,19 @@ footer {
 	background-color: black;
 }
 #welcomeMessage {
-	font-weight: bolder;
+	font-size: 3vh;
+	font-weight: bold;
+	padding-left: 10%;
+	padding-right: 10%;
 	color: black;
+}
+#welcomeTop {
+	line-height: 300%;
+	font-size: 4vh;
 }
 #welcomeHighlight {
 	font-style: italic;
-	font-weight: bold;
+	font-weight: bolder;
 	color: yellow;
 	background-color: black;
 }
@@ -108,13 +141,14 @@ footer {
 #userInfo {
 }
 #loadingMessage {
+	font-size: 5vh;
 	color: black;
 }
 #game {
+	margin: none;
+	padding: 5%;
 	font-family: 'Advent Pro', sans-serif;
-	box-shadow: inset 0px 0px 22px 10px black;
-	overflow: scroll;
-	margin-bottom: 5%;
+	height: 100%;
 }
 #triviaTop,
 #triviaBottom {
@@ -131,10 +165,7 @@ footer {
 	border-radius: 4px;
 }
 #nextQ {
-	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
+
 }
 .btn-group-vertical {
 }
@@ -153,163 +184,11 @@ footer {
 	border: solid black 1px;
 }
 #question {
+	font-size: 4vh;
 	font-weight: bold;
 }
 #response {
+	font-size: 3vh;
 	font-style: italic;
 	font-weight: bolder;
-}
-
-
-@media only screen
-and (min-width : 320px) 
-and (max-width: 560px)
-and (min-resolution: 1dppx) {
-	body {
-		height: 100vh;
-	}
-	small {
-		font-size: 100%;
-	}
-	header {
-		padding: 2.5%;
-		padding-top: none;
-		height: 20%;
-		font-size: 100%;
-	}
-	main {
-		height: 75%;
-	}
-	footer {
-		height: 5%;
-	}
-
-	/* classes */
-	.logo {
-		padding-right: 2%;
-		padding-left: 2%;
-	}
-	/* id's */
-	#title {
-		font-size: 275%;
-		margin-left: 2%; 
-	}
-	#loginSignup {
-		font-size: 200%;
-		padding-top: 10%;
-	}
-	#loginModule button,
-	#signUpModule button {
-		font-size: 75%;
-		width: 33%;
-		height: auto;
-	}
-	#loginModule input,
-	#signUpModule input {
-		height: auto;
-		font-size: 150%;
-	}
-	#loginModule input:focus,
-	#signUpModule input:focus {
-		border-radius: 0;
-		padding-bottom: 0;
-	}
-	#newUser,
-	#back {
-
-	}
-	#newUser:hover,
-	#back:hover {
-		padding-left: 1%;
-		padding-right: 1%;
-	}
-	#welcomeMessage {
-		font-size: 150%;
-		width: 100%;
-		height: 50%;
-		margin-top: 10%;
-		padding-left: 10%;
-		padding-right: 10%;
-		padding-bottom: 5%;
-	}
-	#playNow {
-		margin-top: 0;
-		margin-bottom: 8%;
-	}
-	#welcomeHighlight {
-	}
-	#userStats {
-		padding-left: 2%;
-		margin-top: 2%;
-	}
-	#userInfo {
-		font-size: 80%;
-	}
-	#loadingMessage {
-	}
-	#game {
-		height: 100%;
-		width: 100%;
-		padding: none;
-		padding-top: 2.5%;
-	}
-	#triviaTop,
-	#triviaBottom {
-		height: 10%;
-	}
-	#triviaTop {
-		/*padding-top: 2.5%;*/
-	}
-	#category,
-	#difficulty {
-		padding-left: 1%;
-		padding-right: 1%;
-	}
-	#triviaQuestion,
-	#multipleChoice,
-	#trueFalse
-	#triviaBottom {
-		height: 40%;
-	}
-	#multipleChoice,
-	#trueFalse,
-	#triviaBottom {
-		font-size: auto;
-		width: 100%;
-		margin:none;
-		padding: none;
-	}
-	#triviaBottom {
-		padding-bottom: 5%;
-	}
-	#nextQ {
-	}
-	.btn-group-vertical {
-		width: 100%;
-		height: inherit;
-	}
-	.btn-group-vertical button {
-		font-weight: bolder;
-		border-bottom: solid 2px yellow;
-		padding-left: 2.5%;
-		padding-right: 2.5%;
-		width: 100%;
-		font-size: 100%;
-		height: auto;
-	}
-	#A:hover, 
-	#B:hover, 
-	#C:hover, 
-	#D:hover, 
-	#true:hover,
-	#false:hover,
-	#nexQ:hover {
-		border: none;
-	}
-	#question {
-		font-size: 150%;
-		padding-top: 5%;
-	}
-	#response {
-	}
 }
