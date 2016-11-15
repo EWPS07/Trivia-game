@@ -36,6 +36,9 @@ footer a:hover {
 	font-weight: bolder;
 	text-decoration: none;
 }
+h3 {
+	font-weight: bold;
+}
 
 /* Classes */
 .hidden {
@@ -48,7 +51,7 @@ footer a:hover {
 	padding-right: 2%;
 }
 .btn-group-vertical button {
-	border-bottom: solid .25px yellow;
+	border-bottom: solid .5px yellow;
 }
 
 /* ID's */
@@ -80,9 +83,6 @@ footer a:hover {
 	width: 100%;
 	padding: 5%;
 }
-#game {
-	padding-bottom: 8%;
-}
 #login,
 #signUp {
 	font-weight: bolder;
@@ -97,9 +97,6 @@ footer a:hover {
 	background-color: yellow;
 	color: black;
 } 
-h3 {
-	font-weight: bold;
-}
 #loginModule input,
 #signUpModule input, 
 #loginModule input:focus, 
