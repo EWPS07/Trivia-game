@@ -52,6 +52,8 @@ h3 {
 }
 .btn-group-vertical button {
 	border-bottom: solid .5px yellow;
+	/*padding-top: .25%;
+	padding-bottom: .25%;*/
 }
 
 /* ID's */
@@ -201,7 +203,7 @@ h3 {
 	padding: none;
 }
 #triviaTop {
-	height: 20%;
+	height: 10%;
 }
 #triviaQuestion, 
 #trueFalse, 
@@ -222,7 +224,7 @@ h3 {
 	padding-right: 2%;
 }
 #question {
-	font-size: 4vh;
+	font-size: 3.5vh;
 	font-weight: bolder;
 }
 #response {

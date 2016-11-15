@@ -90,7 +90,7 @@ $(document).ready(function() {
 				// currentUser = Lockr.get(name);
 				loginSignup.classList.add('hidden');
 				welcomeMessage.classList.remove('hidden');
-				userNameinnerHTML = currentUser.name;
+				userName.innerHTML = currentUser.name;
 				totQs.innerHTML = currentUser.totQs;
 				perc.innerHTML = currentUser.perc;
 				return currentUser;
