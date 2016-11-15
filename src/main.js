@@ -18,12 +18,12 @@ $(document).ready(function() {
 
 
 	// get trivia questions function ---------
-	let crossOrigin = 'https://crossorigin.me/';
+	// let crossOrigin = 'https://crossorigin.me/';
 	let api = 'https://www.opentdb.com/api.php?amount=50';
-	let url = crossOrigin+api;	
+	// let url = crossOrigin+api;	
 
 	function getQuestions() {
-		$.get(url, function(data) {
+		$.get(api, function(data) {
 			questions = data.results;
 			return questions;
 		})
