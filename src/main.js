@@ -14,12 +14,9 @@ $(document).ready(function() {
 	var questions = [];
 	
 
-
-
-
 	// get trivia questions function ---------
 	let crossOrigin = 'https://crossorigin.me/';
-	let api = 'https://www.opentdb.com/api.php?amount=50';
+	let api = 'https://www.opentdb.com/api.php?amount=10';
 	let url = crossOrigin+api;	
 
 	function getQuestions() {
@@ -274,7 +271,7 @@ $(document).ready(function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
 		document.getElementById('userStats').classList.remove('hidden');
 		function loaded() {
-			if(questions.length>40) {
+			if(questions.length === 50) {
 				document.getElementById('game').classList.remove('hidden');
 				document.getElementById('loadingMessage').classList.add('hidden');
 				return;
