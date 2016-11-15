@@ -1,22 +1,6 @@
 
 
 $(document).ready(function() {
-	// helper function for logging screen height width
-	var onresize = function() {
-	   var width = window.innerWidth
-	   || document.documentElement.clientWidth
-	   || document.body.clientWidth;
-	   var height = window.innerHeight
-	   || document.documentElement.clientHeight
-	   || document.body.clientHeight;
-	   console.log('height', height);
-	   console.log('width', width);
-	}
-	$(window).resize(function() {
-		onresize();
-	});
-	// helper function for logging screen height width
-
 
 	// User constructor -------------------------------------
 	var User = function(name, pass, totQs, corQs, perc) {
@@ -28,10 +12,15 @@ $(document).ready(function() {
 	}
 	var currentUser;
 	var questions = [];
+	
+
+
+
+
 	// get trivia questions function ---------
 	let crossOrigin = 'https://crossorigin.me/';
 	let api = 'http://www.opentdb.com/api.php?amount=50';
-	let url = crossOrigin+api;
+	let url = crossOrigin+api;	
 
 	function getQuestions() {
 		$.get(url, function(data) {
@@ -49,6 +38,10 @@ $(document).ready(function() {
 	let userName = document.getElementById('userName');
 	let totQs = document.getElementById('totQs');
 	let perc = document.getElementById('perc');
+
+
+
+
 
 	// login function --------------------------------------------
 	function login(event) {
@@ -74,6 +67,11 @@ $(document).ready(function() {
 			alert("Sorry, we don't seem to have your information");
 		}
 	}
+
+
+
+
+
 	// signup function --------------------------------------------
 	function signUp(event) {
 		event.preventDefault();
@@ -276,7 +274,7 @@ $(document).ready(function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
 		document.getElementById('userStats').classList.remove('hidden');
 		function loaded() {
-			if(questions.length === 50) {
+			if(questions.length>40) {
 				document.getElementById('game').classList.remove('hidden');
 				document.getElementById('loadingMessage').classList.add('hidden');
 				return;
