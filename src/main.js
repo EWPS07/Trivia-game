@@ -116,17 +116,20 @@ $(document).ready(function() {
 		let trueFalse = document.getElementById('trueFalse')
 		let category = document.getElementById('category');
 		let difficulty = document.getElementById('difficulty');
-		let qeustion = document.getElementById('question');
+		let question = document.getElementById('question');
 		function hideBtns() {
+			question.classList.add('hidden');
 			trueFalse.classList.add('hidden');
 			multipleChoice.classList.add('hidden');
 			next.classList.remove('hidden');
 		}
 		function showTrueFalse() {
+			question.classList.remove('hidden');
 			trueFalse.classList.remove('hidden');
 			next.classList.add('hidden');
 		}
 		function showMultipleChoice() {
+			question.classList.remove('hidden');
 			multipleChoice.classList.remove('hidden');
 			next.classList.add('hidden');
 		}

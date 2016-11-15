@@ -1,80 +1,111 @@
-
-/************************************************************************************************/
-
-.noMorP {
-	margin-left: none;
-	margin-right: none;
-	padding-left: none;
-	padding-right: none;
-}
-/*html elements*/
 body {
-	font-family: 'Advent Pro', sans-serif;
-	background-color: yellow;
-	margin:none;
-	padding: none;
 	height: 100vh;
-	overflow: hidden;
+	width: 100%;
+	margin: none;
+	padding: none;
+	background-color: black;
+	font-family: 'Advent Pro', sans-serif;
+}
+header, main, footer {
+	width: 100%;
+	margin: none;
+	padding: none;
+	box-shadow:inset 0px 0px 2px 2px black;
+}
+header {
+	height: 15%;
+	padding-left: 5%;
 }
 sub {
 	color: white;
-	font-style: italic;
 	font-size: 2vh;
 }
-header {
-	background-color: black;
-	height: 15%;
-	width: 100%;
-}
 main {
-	margin: none;
-	padding:none;
-	height: 75%;
-	width: 100%;
+	height: 80%;
+	background-color: yellow;
 }
 footer {
-	height: 10%;
-	width: 100%;
 	color: white;
-	background-color: black;
+	height: 5%;
+}
+footer a {
+	color: yellow;
+}
+footer a:hover {
+	color: yellow;
+	font-weight: bolder;
+	text-decoration: none;
 }
 
+/* Classes */
+.hidden {
+	display: none;
+}
 .logo {
 	font-weight: bolder;
 	font-style: italic;
 	padding-left: 2%;
 	padding-right: 2%;
 }
-.mc {
-	width: auto;
-	margin-left: none;
-	padding-right: none;
+.btn-group-vertical button {
+	border-bottom: solid .25px yellow;
 }
+
+/* ID's */
 #title {
-	font-size: 5vh;
+	font-size: 5vw;
 	color: black;
 	background-color: yellow;
-	font-weight: bolder;
-	padding-right: 2%;
-	padding-left: 2%;
-	margin-top: 5%;
+	font-weight: bold;
+	display: inline-block;
 }
-#loginSignup {
-	padding-top: 10%;
+#userStats {
+	font-size: 2vh;
+	color: white;
+	margin-bottom: 2%;
+	padding-bottom: 2%;
 }
-#loginModule button,
-#signUpModule button {
-	background-color: black;
+#totQs, 
+#perc, 
+#userName {
 	color: yellow;
-	outline: none;
+	font-weight: bolder;
 }
-#loginModule button:focus,
-#signUpModule button:focus {
+/* Main sections Components */
+#loginSignup,
+#welcomeMessage,
+#loadingMessage, 
+#game {
+	height: 100%;
+	width: 100%;
+	padding: 5%;
+}
+#game {
+	padding-bottom: 8%;
+}
+#login,
+#signUp {
+	font-weight: bolder;
+	color: yellow;
+	background-color: black;
 	outline: none;
+	margin-top: 10%;
+}
+#login:hover,
+#signUp:hover {
+	border: solid black .25px;
+	background-color: yellow;
+	color: black;
+} 
+h3 {
+	font-weight: bold;
 }
 #loginModule input,
-#signUpModule input {
-	font-size: 4vh;
+#signUpModule input, 
+#loginModule input:focus, 
+#signUpModule input:focus {
+	line-height: 4vh;
+	font-size: 3vh;
 	background-color: transparent;
 	color: black;
 	border: none;
@@ -82,20 +113,6 @@ footer {
 	box-shadow: none;
 	border-bottom: solid black 1px;
 	border-radius: 0;
-}
-#loginModule input:focus,
-#signUpModule input:focus {
-	background-color: transparent;
-	color: black;
-	border: none;
-	outline: none;
-	box-shadow: none;
-	border-bottom: solid black 1px;
-}
-#loginBtn, #signUpBtn {
-	font-weight: bolder;
-	margin-top: 5%;
-	width: 25%;
 }
 #toSignup {
 	font-size: 3vh;
@@ -112,6 +129,51 @@ footer {
 #back:hover {
 	color: yellow;
 	background-color: black;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+/* Game Buttons */
+#playNow {
+	margin-top: 5%;
+}
+
+#playNow,
+#nextQ, 
+#true, 
+#false, 
+#A, 
+#B, 
+#C, 
+#D {
+	color: yellow;
+	background-color: black;
+	outline: none;
+}
+#playNow:focus,
+#nextQ:focus,
+#true:focus,
+#false:focus,
+#A:focus,
+#B:focus,
+#C:focus,
+#D:focus {
+	outline: none;
+}
+#playNow:hover,
+#nextQ:hover,
+#true:hover,
+#false:hover,
+#A:hover,
+#B:hover,
+#C:hover,
+#D:hover {
+	background-color: yellow;
+	color: black;
+	border: solid .5px black;
+}
+#loadingMessage {
+	color: black;
+	font-size: 5vh;
 }
 #welcomeMessage {
 	font-size: 3vh;
@@ -131,112 +193,43 @@ footer {
 	color: yellow;
 	background-color: black;
 }
-#playNow, #playNow:focus,
-#nextQ, #nextQ:focus,
-#true, #true:focus,
-#false, #false:focus,
-#A, #A:focus,
-#B, #B:focus,
-#C, #C:focus,
-#D, #D:focus {
-	background-color: black;
-	color: yellow;
-	outline: none;
-}
-#userStats {
-	color: white;
-	font-size: 2vh;
-}
-#totQs, #perc, #userName {
-	color: yellow;
-}
-#userInfo {
-	margin-top: 10%;
-}
-#loadingMessage {
-	font-size: 5vh;
-	color: black;
-}
-#game {
+
+/* Components of Game Component */
+#triviaTop, 
+#triviaQuestion, 
+#trueFalse, 
+#multipleChoice, 
+#next {
 	margin: none;
 	padding: none;
-	font-family: 'Advent Pro', sans-serif;
-	height: 100%;
-	width: 100%;
-}
-#triviaTop,
-#next {
-	color: black;
-	background-color: transparent;
 }
 #triviaTop {
-	width: 100%;
-	height: 10%;
-	margin-bottom: 5%;
+	height: 20%;
 }
-#triviaQuestion, #trueFalse, #multipleChoice, #next {
-	width: 100%;
-	height: 45%;
+#triviaQuestion, 
+#trueFalse, 
+#multipleChoice, 
+#next {
+	height: 40%;
 }
-#multipleChoice, #trueFalse {
-	margin: none;
+#multipleChoice {
 	font-size: auto;
 }
-#triviaQuestion {
-	padding: 5%;
-	text-align: center;
-}
-#category,
+#category, 
 #difficulty {
-	font-size: auto;
-	color: yellow;
+	font-size: 2vh;
+	font-weight: bold;
 	background-color: black;
-	border: solid black 2px;
-	border-radius: 4px;
-}
-#category {
-	margin-right: 5%;
-}
-#difficulty {
-	margin-left: 5%;
-}
-#triviaTop, #triviaQuestion, #trueFalse, #multipleChoice, #next {
-	padding: 5%;
-}
-#trueFalse, #multipleChoice {
-	margin: 0 auto;
-	padding: 0 auto;
-	margin-bottom: 0;
-}
-.btn-group-vertical {
-	margin-bottom: 2%;
-}
-.btn-group-vertical button {
-	padding: 0 auto;
-	margin: 0 auto;
-	border-bottom: .5px solid yellow;
-	background-size: contain;
-}
-#A:hover, 
-#B:hover, 
-#C:hover, 
-#D:hover, 
-#true:hover,
-#false:hover,
-#nextQ:hover {
-	color: black;
-	background-color: yellow;
-	border: solid black 1px;
+	color: yellow;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 #question {
-	height: 75%;
-	font-size: 3.5vh;
-	font-weight: bold;
-	margin: 1%;
+	font-size: 4vh;
+	font-weight: bolder;
 }
 #response {
-	height: 25%;
-	font-size: 2.5vh;
 	font-style: italic;
 	font-weight: bolder;
+	font-size: 3vh;
 }
