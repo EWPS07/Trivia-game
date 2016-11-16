@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-
+	screen.lockOrientation('portrait');
 	// User constructor -------------------------------------
 	var User = function(name, pass, totQs, corQs, perc) {
 		this.name = name;
