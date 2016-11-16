@@ -12,6 +12,19 @@ $(document).ready(function() {
 	}
 	var currentUser;
 	var questions = [];
+	let loginSignup = document.getElementById('loginSignup');
+	let welcomeMessage = document.getElementById('welcomeMessage');
+	let userName = document.getElementById('userName');
+	let totQs = document.getElementById('totQs');
+	let perc = document.getElementById('perc');
+	var count = 0;
+	var answeredCorrect;
+	let signUpBtn = document.getElementById('signUp');
+	let loginBtn = document.getElementById('login');
+	let newUser = document.getElementById('newUser');
+	let loginModule = document.getElementById('loginModule');
+	let signUpModule = document.getElementById('signUpModule');
+	let back = document.getElementById('back');
 	
 
 	// get trivia questions function ---------
@@ -24,20 +37,15 @@ $(document).ready(function() {
 			questions = data.results;
 			return questions;
 		})
+		.fail(function() {
+			console.log('error');
+			alert('Sorry, something went wrong with the request');
+		})
 		// return questions;
 		.done(function() {
 			assemble();
 		})
 	}
-
-	let loginSignup = document.getElementById('loginSignup');
-	let welcomeMessage = document.getElementById('welcomeMessage');
-	let userName = document.getElementById('userName');
-	let totQs = document.getElementById('totQs');
-	let perc = document.getElementById('perc');
-
-
-
 
 
 	// login function --------------------------------------------
@@ -64,10 +72,6 @@ $(document).ready(function() {
 			alert("Sorry, we don't seem to have your information");
 		}
 	}
-
-
-
-
 
 	// signup function --------------------------------------------
 	function signUp(event) {
@@ -101,8 +105,6 @@ $(document).ready(function() {
 
 
 	// assemble question UI --------------------------------------------
-	var count = 0;
-	var answeredCorrect;
 	function assemble() {
 		answeredCorrect = false;
 		let response = document.getElementById('response');
@@ -170,25 +172,29 @@ $(document).ready(function() {
 			showMultipleChoice();
 			
 			let possibleAnswers = questions[count].incorrect_answers;
+			// loop through and add a reference number to possible answers
 			for(var i=0;i<possibleAnswers.length;i++) {
 				possibleAnswers[i] = [possibleAnswers[i], i+1];
 			}
+			// add reference number(index 0) to correct answer
 			let rightAnswer = [questions[count].correct_answer, 0];
+			// add correct answer to possible answers
 			possibleAnswers.push(rightAnswer);
-			console.log(possibleAnswers);
+			// change order of possible answers
 			possibleAnswers.sort();
-			console.log(possibleAnswers);
 
 			let A = document.getElementById('A');
 			let B = document.getElementById('B');
 			let C = document.getElementById('C');
 			let D = document.getElementById('D');
 			
+			// add answer text to ABCD buttons
 			A.innerHTML = possibleAnswers[0][0];
 			B.innerHTML = possibleAnswers[1][0];
 			C.innerHTML = possibleAnswers[2][0];
 			D.innerHTML = possibleAnswers[3][0];
 			
+			// Multiple choice answer buttons ------------
 			A.addEventListener('click', function() {
 				hideBtns();
 				if(possibleAnswers[0][1] === 0) {
@@ -240,33 +246,26 @@ $(document).ready(function() {
 		}
 		return (answeredCorrect, currentUser);
 	}
-
+	// Grab trivia questions ---------------------
 	getQuestions();
-	let signUpBtn = document.getElementById('signUp');
-	let loginBtn = document.getElementById('login');
-	let newUser = document.getElementById('newUser');
-	let loginModule = document.getElementById('loginModule');
-	let signUpModule = document.getElementById('signUpModule');
-	let back = document.getElementById('back');
 
+	// Signup/Login buttons
 	signUpBtn.addEventListener('click', signUp);
-	
 	loginBtn.addEventListener('click', login);
-	
 	newUser.addEventListener('click', function() {
 		document.getElementById('toSignup').classList.add('hidden');
 		loginModule.classList.add('hidden');
 		signUpModule.classList.remove('hidden');
 		back.classList.remove('hidden');
 	})
-	
+	// Back to login screen ---------------------
 	back.addEventListener('click', function() {
 		this.classList.add('hidden');
 		loginModule.classList.remove('hidden');
 		signUpModule.classList.add('hidden');
 		document.getElementById('toSignup').classList.remove('hidden');
 	})
-
+	// Play now button --------------------------
 	document.getElementById('playNow').addEventListener('click', function() {
 		document.getElementById('welcomeMessage').classList.add('hidden');
 		document.getElementById('userStats').classList.remove('hidden');
@@ -282,7 +281,7 @@ $(document).ready(function() {
 		}
 		loaded();
 	})
-	
+	// next question button ----------------------
 	document.getElementById('nextQ').addEventListener('click', function() {
 		if(answeredCorrect === true) {
 			currentUser.corQs+=1;
