@@ -51,6 +51,7 @@ h3 {
 	padding-left: 2%;
 	padding-right: 2%;
 }
+
 .btn-group-vertical button {
 	border-bottom: solid .5px yellow;
 	padding-top: .5%;
@@ -77,6 +78,7 @@ h3 {
 	color: yellow;
 	font-weight: bolder;
 }
+
 /* Main sections Components */
 #loginSignup,
 #welcomeMessage,
@@ -85,6 +87,7 @@ h3 {
 	height: 100%;
 	width: 100%;
 	padding: 5%;
+	padding-top: none;
 }
 #login,
 #signUp {
@@ -136,7 +139,6 @@ h3 {
 #playNow {
 	margin-top: 5%;
 }
-
 #playNow,
 #nextQ, 
 #true, 
@@ -144,7 +146,9 @@ h3 {
 #A, 
 #B, 
 #C, 
-#D {
+#D,
+#newQuestions,
+#chooseC {
 	color: yellow;
 	background-color: black;
 	outline: none;
@@ -156,7 +160,9 @@ h3 {
 #A:focus,
 #B:focus,
 #C:focus,
-#D:focus {
+#D:focus,
+#newQuestions:focus,
+#chooseC:focus {
 	outline: none;
 }
 #playNow:hover,
@@ -166,7 +172,8 @@ h3 {
 #A:hover,
 #B:hover,
 #C:hover,
-#D:hover {
+#D:hover,
+#nextQuestions:hover {
 	background-color: yellow;
 	color: black;
 	border: solid .5px black;
@@ -195,6 +202,7 @@ h3 {
 }
 
 /* Components of Game Component */
+#selectCategory,
 #triviaTop, 
 #triviaQuestion, 
 #trueFalse, 
@@ -203,8 +211,11 @@ h3 {
 	margin: none;
 	padding: none;
 }
+#selectCategory {
+	height: 8%;
+}
 #triviaTop {
-	height: 10%;
+	height: 12%;
 }
 #triviaQuestion, 
 #trueFalse, 

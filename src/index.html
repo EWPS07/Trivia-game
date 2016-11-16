@@ -103,7 +103,26 @@
 
       <!-- Game Module -->
       <div class="container-fluid text-center hidden" id='game'>
-        
+        <div class='row-fluid' id='selectCategory'>
+          <form id='selectCatForm'>
+            <div class="col-xs-4 col-xs-offset-2">
+              <select class="form-control" id='chooseC'>
+                <option class="form-control"value="any">Any</option>
+                <option class="form-control"value="9">General Knowledge</option>
+                <option class="form-control"value="11">Entertainment: Film</option>
+                <option class="form-control"value="12">Entertainment: Music</option>
+                <option class="form-control"value="15">Entertainment: Video Games</option>
+                <option class="form-control"value="17">Science &amp; Nature</option>
+                <option class="form-control"value="18">Science: Computers</option>
+                <option class="form-control"value="22">Geography</option>
+                <option class="form-control"value="23">History</option>
+              </select>
+            </div>
+            <div class="col-xs-4">
+              <button type="submit" class="form-control" id='newQuestions'>Get Questions</button>
+            </div>
+          </form> 
+        </div>
         <div class='row-fluid' id='triviaTop'>
           <span id='category'></span>
           <br/>

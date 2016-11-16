@@ -26,13 +26,23 @@ $(document).ready(function() {
 	let signUpModule = document.getElementById('signUpModule');
 	let back = document.getElementById('back');
 	
-
+	// https://www.opentdb.com/api.php?amount=50&category=21&difficulty=medium
 	// get trivia questions function ---------
 	let crossOrigin = 'https://crossorigin.me/';
-	let api = 'https://www.opentdb.com/api.php?amount=50';
-	let url = crossOrigin+api;	
+	let apiBase = 'https://www.opentdb.com/api.php?amount=50';
+	let category = document.getElementById('chooseC').value;
+	let newQuestions = document.getElementById('newQuestions');
+	let urlBase = crossOrigin+apiBase;	
 
 	function getQuestions() {
+
+		if(category !== 'any') {
+			url+='&category='+category;
+		}
+		else {
+			url=urlBase;
+		}
+		console.log(url);
 		$.get(url, function(data) {
 			questions = data.results;
 			return questions;
@@ -103,6 +113,13 @@ $(document).ready(function() {
 		}
 	}
 
+	// new questions set function ---------------------------------
+	function personalize(event) {
+		event.preventDefault();
+		category = document.getElementById('chooseC').value;
+		console.log(category);
+		getQuestions();
+	}
 
 	// assemble question UI --------------------------------------------
 	function assemble() {
@@ -305,4 +322,5 @@ $(document).ready(function() {
 			assemble();
 		}
 	})
+	newQuestions.addEventListener('click', personalize);
 })
