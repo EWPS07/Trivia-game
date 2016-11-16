@@ -178,6 +178,11 @@ h3 {
 	color: black;
 	border: solid .5px black;
 }
+#nextQuestions {
+	font-weight: bolder;
+	padding-top: .5%;
+	padding-bottom: .5%;
+}
 #loadingMessage {
 	color: black;
 	font-size: 5vh;
