@@ -20,7 +20,7 @@ $(document).ready(function() {
 	let url = crossOrigin+api;	
 
 	function getQuestions() {
-		$.get(api, function(data) {
+		$.get(url, function(data) {
 			questions = data.results;
 			return questions;
 		})
