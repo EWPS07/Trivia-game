@@ -104,8 +104,8 @@ h3 {
 #signUpModule input, 
 #loginModule input:focus, 
 #signUpModule input:focus {
-	line-height: 4vh;
 	font-size: 3vh;
+	line-height: auto;
 	background-color: transparent;
 	color: black;
 	border: none;
